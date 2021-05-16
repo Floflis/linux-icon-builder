@@ -2,9 +2,9 @@
 
 echo "Welcome to another awesome autistic art by Daniella Mesquita."
 
-if [ ! -f icons/16x16 ]; then
+if [ ! -e icons ]; then
     echo ""
-    echo "It looks like its your first time using linux-icon-builder!"
+    echo "It looks like its your first time using linux-icon-builder! 🤗"
     echo "Initializing... 🧚"
     mkdir icons
     mkdir icons/16x16
@@ -27,7 +27,7 @@ echo "Minimum dimensions: 512x512 🧗"
 echo -n "Please write the file path/name.extension:"
 read imgname
 if [ $(identify -ping -format '%w' $imgname) -ge 512 ]; then
-    echo "Confirmed, it meets the minimum dimensions. File dimensions: $(identify -ping -format '%w' $imgname)x$(identify -ping -format '%w' $imgname)"
+    echo "Confirmed, it meets the minimum dimensions. File dimensions: $(identify -ping -format '%w' $imgname)x$(identify -ping -format '%w' $imgname) 🙌"
     echo -n "Please write the name you want for your icon:"
     read applyname
     echo "Ok, working... 👩‍🏭"
