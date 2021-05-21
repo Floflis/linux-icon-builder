@@ -17,6 +17,16 @@ if [ ! -e icons ]; then
     mkdir icons/48x48@2x
     mkdir icons/256x256
     mkdir icons/256x256@2x
+    mkdir icons/16x16/apps
+    mkdir icons/16x16@2x/apps
+    mkdir icons/24x24/apps
+    mkdir icons/24x24@2x/apps
+    mkdir icons/32x32/apps
+    mkdir icons/32x32@2x/apps
+    mkdir icons/48x48/apps
+    mkdir icons/48x48@2x/apps
+    mkdir icons/256x256/apps
+    mkdir icons/256x256@2x/apps
 fi
 
 echo ""
@@ -31,17 +41,17 @@ if [ $(identify -ping -format '%w' $imgname) -ge 512 ]; then
     echo -n "Please write the name you want for your icon:"
     read applyname
     echo "Ok, working... 👩‍🏭"
-    convert $imgname    -resize 16x16  icons/16x16/$applyname
-    convert $imgname    -resize 32x32  icons/16x16@2x/$applyname
-    convert $imgname    -resize 32x32  icons/32x32/$applyname
-    convert $imgname    -resize 24x24  icons/24x24/$applyname
-    convert $imgname    -resize 48x48  icons/24x24@2x/$applyname
-    convert $imgname    -resize 48x48  icons/48x48/$applyname
-    convert $imgname    -resize 32x32  icons/32x32/$applyname
-    convert $imgname    -resize 64x64  icons/32x32@2x/$applyname
-    convert $imgname    -resize 96x96  icons/48x48@2x/$applyname
-    convert $imgname    -resize 256x256  icons/256x256/$applyname
-    convert $imgname    -resize 512x512  icons/256x256@2x/$applyname
+    convert $imgname    -resize 16x16  icons/16x16/apps/$applyname
+    convert $imgname    -resize 32x32  icons/16x16@2x/apps/$applyname
+    convert $imgname    -resize 32x32  icons/32x32/apps/$applyname
+    convert $imgname    -resize 24x24  icons/24x24/apps/$applyname
+    convert $imgname    -resize 48x48  icons/24x24@2x/apps/$applyname
+    convert $imgname    -resize 48x48  icons/48x48/apps/$applyname
+    convert $imgname    -resize 32x32  icons/32x32/apps/$applyname
+    convert $imgname    -resize 64x64  icons/32x32@2x/apps/$applyname
+    convert $imgname    -resize 96x96  icons/48x48@2x/apps/$applyname
+    convert $imgname    -resize 256x256  icons/256x256/apps/$applyname
+    convert $imgname    -resize 512x512  icons/256x256@2x/apps/$applyname
     echo "Done! Kisses 😘"
     echo "Tip: copy the content of the 'icons' folder to the icon pack you want to patch. After done, pls don't forget to delete the 'icons' folder 💁‍♀️"
     else
