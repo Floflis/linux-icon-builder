@@ -38,7 +38,7 @@ echo -n "Please write the file path/name.extension:"
 read imgname
 if [ $(identify -ping -format '%w' $imgname) -ge 512 ]; then
     echo "Confirmed, it meets the minimum dimensions. File dimensions: $(identify -ping -format '%w' $imgname)x$(identify -ping -format '%w' $imgname) 🙌"
-    echo -n "Please write the name you want for your icon:"
+    echo -n "Please write the name.extension you want for your icon:"
     read applyname
     echo "Ok, working... 👩‍🏭"
     convert $imgname    -resize 16x16  icons/16x16/apps/$applyname
