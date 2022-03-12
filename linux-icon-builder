@@ -2,7 +2,6 @@
 
 echo "Welcome to another awesome autistic art by Daniella Mesquita."
 
-#process () {
 processicons () {
 echo ""
 
@@ -164,16 +163,12 @@ fi
 #fi
 
 if [ "$1" = "" ]; then
-   echo "Not interactive"
    is_interactive=""
-   #process
    processicons
 else
-   echo "Interactive"
    is_interactive="true"
    imgname="$1"
    iconcategory="$2"
    applyname="$3"
-   #process
    processicons
 fi

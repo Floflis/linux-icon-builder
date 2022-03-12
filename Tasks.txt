@@ -1,5 +1,4 @@
 - README.md: tell about programatic use
-- rename script.sh to linux-icon-builder
 - Installer
 - README.md: tell about installing
 
