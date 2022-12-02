@@ -11,27 +11,27 @@ echo -n "Please write the icon category you want for your icon:"
 read iconcategory
 fi
 
-mkdir icons
-mkdir icons/16x16
-mkdir icons/16x16@2x
-mkdir icons/24x24
-mkdir icons/24x24@2x
-mkdir icons/32x32
-mkdir icons/32x32@2x
-mkdir icons/48x48
-mkdir icons/48x48@2x
-mkdir icons/256x256
-mkdir icons/256x256@2x
-mkdir icons/16x16/$iconcategory
-mkdir icons/16x16@2x/$iconcategory
-mkdir icons/24x24/$iconcategory
-mkdir icons/24x24@2x/$iconcategory
-mkdir icons/32x32/$iconcategory
-mkdir icons/32x32@2x/$iconcategory
-mkdir icons/48x48/$iconcategory
-mkdir icons/48x48@2x/$iconcategory
-mkdir icons/256x256/$iconcategory
-mkdir icons/256x256@2x/$iconcategory
+if [ ! -e icons ]; then mkdir icons; fi
+if [ ! -e icons/16x16 ]; then mkdir icons/16x16; fi
+if [ ! -e icons/16x16@2x ]; then mkdir icons/16x16@2x; fi
+if [ ! -e icons/24x24 ]; then mkdir icons/24x24; fi
+if [ ! -e icons/24x24@2x ]; then mkdir icons/24x24@2x; fi
+if [ ! -e icons/32x32 ]; then mkdir icons/32x32; fi
+if [ ! -e icons/32x32@2x ]; then mkdir icons/32x32@2x; fi
+if [ ! -e icons/48x48 ]; then mkdir icons/48x48; fi
+if [ ! -e icons/48x48@2x ]; then mkdir icons/48x48@2x; fi
+if [ ! -e icons/256x256 ]; then mkdir icons/256x256; fi
+if [ ! -e icons/256x256@2x ]; then mkdir icons/256x256@2x; fi
+if [ ! -e icons/16x16/$iconcategory ]; then mkdir icons/16x16/$iconcategory; fi
+if [ ! -e icons/16x16@2x/$iconcategory ]; then mkdir icons/16x16@2x/$iconcategory; fi
+if [ ! -e icons/24x24/$iconcategory ]; then mkdir icons/24x24/$iconcategory; fi
+if [ ! -e icons/24x24@2x/$iconcategory ]; then mkdir icons/24x24@2x/$iconcategory; fi
+if [ ! -e icons/32x32/$iconcategory ]; then mkdir icons/32x32/$iconcategory; fi
+if [ ! -e icons/32x32@2x/$iconcategory ]; then mkdir icons/32x32@2x/$iconcategory; fi
+if [ ! -e icons/48x48/$iconcategory ]; then mkdir icons/48x48/$iconcategory; fi
+if [ ! -e icons/48x48@2x/$iconcategory ]; then mkdir icons/48x48@2x/$iconcategory; fi
+if [ ! -e icons/256x256/$iconcategory ]; then mkdir icons/256x256/$iconcategory; fi
+if [ ! -e icons/256x256@2x/$iconcategory ]; then mkdir icons/256x256@2x/$iconcategory; fi
 
 if [ "$is_interactive" != "true" ]; then
 echo "Bellow, please write the name.extension of the source image (if it isn't in this same folder, write the full path) file you want to convert into Linux icon."
